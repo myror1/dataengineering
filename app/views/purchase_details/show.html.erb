@@ -1,0 +1,33 @@
+
+<p>
+  <strong>Purchaser name:</strong>
+  <%= @purchase_detail.purchaser_name %>
+</p>
+
+<p>
+  <strong>Item description:</strong>
+  <%= @purchase_detail.item_description %>
+</p>
+
+<p>
+  <strong>Item price:</strong>
+  <%= @purchase_detail.item_price %>
+</p>
+
+<p>
+  <strong>Purchase count:</strong>
+  <%= @purchase_detail.purchase_count %>
+</p>
+
+<p>
+  <strong>Merchant address:</strong>
+  <%= @purchase_detail.merchant_address %>
+</p>
+
+<p>
+  <strong>Merchant name:</strong>
+  <%= @purchase_detail.merchant_name %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_detail_path(@purchase_detail) %> |
+<%= link_to 'Back', purchase_details_path %>

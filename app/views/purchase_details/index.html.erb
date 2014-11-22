@@ -1,0 +1,39 @@
+<h1>Listing purchase_details</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Purchaser name</th>
+      <th>Item description</th>
+      <th>Item price</th>
+      <th>Purchase count</th>
+      <th>Merchant address</th>
+      <th>Merchant name</th>
+      <th colspan="3">CRUD</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchase_details.each do |purchase_detail| %>
+      <tr>
+        <td><%= purchase_detail.purchaser_name %></td>
+        <td><%= purchase_detail.item_description %></td>
+        <td><%= purchase_detail.item_price %></td>
+        <td><%= purchase_detail.purchase_count %></td>
+        <td><%= purchase_detail.merchant_address %></td>
+        <td><%= purchase_detail.merchant_name %></td>
+        <td><%= link_to 'Show', purchase_detail %></td>
+        <td><%= link_to 'Edit', edit_purchase_detail_path(purchase_detail) %></td>
+        <td><%= link_to 'Destroy', purchase_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<br />
+<b>Total Amount <%= number_to_currency(@total_amount)%></b>
+
+<br>
+<br>
+
+<%= link_to 'New Data input', new_data_input_path %>
